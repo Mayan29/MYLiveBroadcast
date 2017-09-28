@@ -8,7 +8,7 @@
 
 #import "MYHomeViewController.h"
 
-@interface MYHomeViewController ()
+@interface MYHomeViewController () <UISearchBarDelegate>
 
 @end
 
@@ -16,22 +16,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupNavigationBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Setup UI
+- (void)setupNavigationBar
+{
+    // 设置右侧收藏 item
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"home_favorites"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
+    
+    // 设置搜索框
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.placeholder    = @"主播昵称/房间号/链接";
+    searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    searchBar.tintColor      = [UIColor whiteColor];
+    searchBar.delegate       = self;
+    
+    UITextField *textField = [searchBar valueForKeyPath:@"_searchField"];
+    textField.textColor = [UIColor whiteColor];
+    
+    self.navigationItem.titleView = searchBar;
 }
-*/
+
+#pragma mark - Action
+- (void)rightItemClick
+{
+    NSLog(@"前往收藏夹");
+}
+
 
 @end

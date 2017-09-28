@@ -25,7 +25,7 @@
                                   NSFontAttributeName : SYS_FONT(15),
                                   NSForegroundColorAttributeName : [UIColor orangeColor]
                                   }];
-    [bar setBackgroundImage:[UIImage imageNamed:@"导航栏图片"] forBarMetrics:UIBarMetricsDefault];
+    [bar setBarTintColor:[UIColor blackColor]];
     
     // 2.设置Item主题样式（高亮颜色尚未处理完善、可用类别创建文字按钮）
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
@@ -74,6 +74,12 @@
 {
     // 非根控制器才会触发
     return (self.childViewControllers.count > 1);
+}
+
+
+#pragma mark - 控制器状态栏的颜色
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.topViewController;
 }
 
 
