@@ -7,4 +7,4 @@
 
 - title 栏颜色没有实现渐变，只是生硬的改变
 
-![pic01](https://github.com/Mayan29/WebcastProject/blob/master/DATA/pic01.gif)
+![pic01](https://github.com/Mayan29/MYLiveBroadcast/blob/master/DATA/pic01.gif)

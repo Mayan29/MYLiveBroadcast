@@ -50,6 +50,10 @@
 		BC40B28B1F7CB4BC00B968D4 /* MYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B28A1F7CB4BC00B968D4 /* MYDiscoverViewController.m */; };
 		BC40B28E1F7CB4C800B968D4 /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B28D1F7CB4C800B968D4 /* MYProfileViewController.m */; };
 		BC40B2911F7CB4D200B968D4 /* MYRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */; };
+		BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD145881F8B21160083987E /* MYPageContentView.m */; };
+		BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458A1F8B21160083987E /* MYPageTitleView.m */; };
+		BCD145911F8B21160083987E /* MYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458C1F8B21160083987E /* MYPageView.m */; };
+		BCD145921F8B21160083987E /* MYPageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458E1F8B21160083987E /* MYPageViewStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +165,14 @@
 		BC40B28D1F7CB4C800B968D4 /* MYProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileViewController.m; sourceTree = "<group>"; };
 		BC40B28F1F7CB4D200B968D4 /* MYRankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYRankViewController.h; sourceTree = "<group>"; };
 		BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYRankViewController.m; sourceTree = "<group>"; };
+		BCD145871F8B21160083987E /* MYPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageContentView.h; sourceTree = "<group>"; };
+		BCD145881F8B21160083987E /* MYPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageContentView.m; sourceTree = "<group>"; };
+		BCD145891F8B21160083987E /* MYPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageTitleView.h; sourceTree = "<group>"; };
+		BCD1458A1F8B21160083987E /* MYPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageTitleView.m; sourceTree = "<group>"; };
+		BCD1458B1F8B21160083987E /* MYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageView.h; sourceTree = "<group>"; };
+		BCD1458C1F8B21160083987E /* MYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageView.m; sourceTree = "<group>"; };
+		BCD1458D1F8B21160083987E /* MYPageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageViewStyle.h; sourceTree = "<group>"; };
+		BCD1458E1F8B21160083987E /* MYPageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageViewStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +300,7 @@
 		BC40B20F1F7CB30300B968D4 /* CustomView(自定义控件) */ = {
 			isa = PBXGroup;
 			children = (
+				BCD145861F8B21160083987E /* MYPageView */,
 				BC40B2101F7CB30300B968D4 /* MYPlacehoderTextView.h */,
 				BC40B2111F7CB30300B968D4 /* MYPlacehoderTextView.m */,
 			);
@@ -477,6 +490,21 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BCD145861F8B21160083987E /* MYPageView */ = {
+			isa = PBXGroup;
+			children = (
+				BCD145871F8B21160083987E /* MYPageContentView.h */,
+				BCD145881F8B21160083987E /* MYPageContentView.m */,
+				BCD145891F8B21160083987E /* MYPageTitleView.h */,
+				BCD1458A1F8B21160083987E /* MYPageTitleView.m */,
+				BCD1458B1F8B21160083987E /* MYPageView.h */,
+				BCD1458C1F8B21160083987E /* MYPageView.m */,
+				BCD1458D1F8B21160083987E /* MYPageViewStyle.h */,
+				BCD1458E1F8B21160083987E /* MYPageViewStyle.m */,
+			);
+			path = MYPageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -615,9 +643,12 @@
 				BC40B25C1F7CB30300B968D4 /* MYTabBarController.m in Sources */,
 				BC40B26C1F7CB30300B968D4 /* NSTimer+YYAdd.m in Sources */,
 				BC40B26D1F7CB30300B968D4 /* CALayer+YYAdd.m in Sources */,
+				BCD145921F8B21160083987E /* MYPageViewStyle.m in Sources */,
+				BCD145911F8B21160083987E /* MYPageView.m in Sources */,
 				BC40B2651F7CB30300B968D4 /* NSNotificationCenter+YYAdd.m in Sources */,
 				BC40B28B1F7CB4BC00B968D4 /* MYDiscoverViewController.m in Sources */,
 				BC40B26E1F7CB30300B968D4 /* YYCGUtilities.m in Sources */,
+				BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */,
 				BC40B28E1F7CB4C800B968D4 /* MYProfileViewController.m in Sources */,
 				BC40B26A1F7CB30300B968D4 /* NSString+YYAdd.m in Sources */,
 				BC40B27A1F7CB30300B968D4 /* UITableView+YYAdd.m in Sources */,
@@ -636,6 +667,7 @@
 				BC40B2731F7CB30300B968D4 /* UIControl+YYAdd.m in Sources */,
 				BC40B27C1F7CB30300B968D4 /* UIView+YYAdd.m in Sources */,
 				BC40B2751F7CB30300B968D4 /* UIFont+YYAdd.m in Sources */,
+				BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */,
 				BC40B2671F7CB30300B968D4 /* NSObject+YYAdd.m in Sources */,
 				BC40B2741F7CB30300B968D4 /* UIDevice+YYAdd.m in Sources */,
 				BC40B26F1F7CB30300B968D4 /* UIApplication+YYAdd.m in Sources */,
