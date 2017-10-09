@@ -26,6 +26,7 @@
 #define MYScreenBounds [UIScreen mainScreen].bounds
 #define MYScreenW      [UIScreen mainScreen].bounds.size.width
 #define MYScreenH      [UIScreen mainScreen].bounds.size.height
+#define MYStatusBarH   [UIApplication sharedApplication].statusBarFrame.size.height
 
 // 屏幕适配
 #define iPhone4  (MYScreenH == 480)
