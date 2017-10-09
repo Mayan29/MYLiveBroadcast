@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pkO-CJ-FUm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="B2j-7d-cnm">
+            <objects>
+                <tabBarController id="pkO-CJ-FUm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aiz-UT-h1l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8AN-Lv-uzq" kind="relationship" relationship="viewControllers" id="FlF-2b-aAU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIK-Ia-O4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="-295"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="ZXU-y8-ebx">
+            <objects>
+                <navigationController id="8AN-Lv-uzq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="live-n" id="Td8-Ld-XWO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JdH-0c-9K6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="E1M-2U-9Tv" kind="relationship" relationship="rootViewController" id="b5Z-nn-VUe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDe-6u-N94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-297"/>
+        </scene>
+        <!--MYWaterFall-->
+        <scene sceneID="mPC-1N-Bq6">
+            <objects>
+                <viewController id="E1M-2U-9Tv" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7zy-z9-0QJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XCE-dV-Iiy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bal-vg-R1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MYWaterFall" id="hYa-CK-uX8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7q-P6-oZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="-297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="live-n" width="25" height="19"/>
+    </resources>
+</document>

@@ -10,7 +10,7 @@
 #import "MYPageView.h"
 
 // RGB颜色
-#define MYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:0.5]
 // 随机色
 #define MYRandomColor MYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
@@ -19,12 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSStringFromClass([MYPageView class]);
-    
-    
     // 1. frame
     CGFloat y = self.navigationController.navigationBar.bounds.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
-    CGRect frame = CGRectMake(0, y, self.view.bounds.size.width, self.view.bounds.size.height - y);
+    CGRect frame = CGRectMake(0, y, self.view.bounds.size.width, self.view.bounds.size.height - y - self.tabBarController.tabBar.bounds.size.height);
     // 2. 标题
     NSArray *titles = @[@"全部", @"高颜值", @"偶像派", @"好声音", @"有才艺", @"小鲜肉", @"搞笑", @"劲爆", @"更多"];
     // 3. 子控制器
@@ -56,5 +53,6 @@
     
     return vc;
 }
+
 
 @end

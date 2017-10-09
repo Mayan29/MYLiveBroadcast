@@ -1,6 +1,6 @@
 //
-//  MYPageViewUITests.m
-//  MYPageViewUITests
+//  MYWaterFallUITests.m
+//  MYWaterFallUITests
 //
 //  Created by mayan on 2017/10/9.
 //  Copyright © 2017年 mayan. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface MYPageViewUITests : XCTestCase
+@interface MYWaterFallUITests : XCTestCase
 
 @end
 
-@implementation MYPageViewUITests
+@implementation MYWaterFallUITests
 
 - (void)setUp {
     [super setUp];
