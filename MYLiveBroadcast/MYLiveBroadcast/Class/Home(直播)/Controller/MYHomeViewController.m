@@ -8,6 +8,7 @@
 
 #import "MYHomeViewController.h"
 #import "MYPageView.h"
+#import "MYAnchorViewController.h"
 
 @interface MYHomeViewController () <UISearchBarDelegate>
 
@@ -37,16 +38,18 @@
 - (void)setupUI
 {
     // 1. frame
-    CGFloat y = self.navigationController.navigationBar.bounds.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
-    CGRect frame = CGRectMake(0, y, self.view.bounds.size.width, self.view.bounds.size.height - y - self.tabBarController.tabBar.bounds.size.height);
+    CGFloat x = 0;
+    CGFloat y = MYNavigationBarH + MYStatusBarH;
+    CGFloat w = self.view.bounds.size.width;
+    CGFloat h = self.view.bounds.size.height - y - MYTabBarH;
+    CGRect frame = CGRectMake(x, y, w, h);
     // 2. 标题
     NSArray *titles = @[@"全部", @"高颜值", @"偶像派", @"好声音", @"有才艺", @"小鲜肉", @"搞笑", @"劲爆", @"更多"];
     // 3. 子控制器
     NSMutableArray *childVCs = [NSMutableArray array];
     for (int i = 0; i < titles.count; i++) {
         
-        UIViewController *vc = [[UIViewController alloc] init];
-        vc.view.backgroundColor = MYRandomColor;
+        MYAnchorViewController *vc = [[MYAnchorViewController alloc] init];
         [childVCs addObject:vc];
     }
     // 4. 样式

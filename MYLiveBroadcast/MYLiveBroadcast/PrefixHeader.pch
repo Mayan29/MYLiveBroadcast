@@ -23,10 +23,12 @@
 #endif
 
 // 屏幕宽度
-#define MYScreenBounds [UIScreen mainScreen].bounds
-#define MYScreenW      [UIScreen mainScreen].bounds.size.width
-#define MYScreenH      [UIScreen mainScreen].bounds.size.height
-#define MYStatusBarH   [UIApplication sharedApplication].statusBarFrame.size.height
+#define MYScreenBounds   [UIScreen mainScreen].bounds
+#define MYScreenW        [UIScreen mainScreen].bounds.size.width
+#define MYScreenH        [UIScreen mainScreen].bounds.size.height
+#define MYStatusBarH     [UIApplication sharedApplication].statusBarFrame.size.height
+#define MYNavigationBarH [[UINavigationController alloc] init].navigationBar.bounds.size.height
+#define MYTabBarH        [[UITabBarController alloc] init].tabBar.bounds.size.height
 
 // 屏幕适配
 #define iPhone4  (MYScreenH == 480)
