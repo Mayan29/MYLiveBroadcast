@@ -94,6 +94,7 @@
 		BC40B2911F7CB4D200B968D4 /* MYRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */; };
 		BC63C6BF1F8B5FC500A2DA7B /* MYAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */; };
 		BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */; };
+		BC9ED9F01F8CC7CB00879220 /* CALayer+ParticleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */; };
 		BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD145881F8B21160083987E /* MYPageContentView.m */; };
 		BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458A1F8B21160083987E /* MYPageTitleView.m */; };
 		BCD145911F8B21160083987E /* MYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458C1F8B21160083987E /* MYPageView.m */; };
@@ -299,6 +300,8 @@
 		BC63C6BD1F8B5FC500A2DA7B /* MYAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAnchorViewController.h; sourceTree = "<group>"; };
 		BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAnchorViewController.m; sourceTree = "<group>"; };
 		BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYRoomViewController.xib; sourceTree = "<group>"; };
+		BC9ED9EE1F8CC7CB00879220 /* CALayer+ParticleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ParticleAnimation.h"; sourceTree = "<group>"; };
+		BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ParticleAnimation.m"; sourceTree = "<group>"; };
 		BCD145871F8B21160083987E /* MYPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageContentView.h; sourceTree = "<group>"; };
 		BCD145881F8B21160083987E /* MYPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageContentView.m; sourceTree = "<group>"; };
 		BCD145891F8B21160083987E /* MYPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageTitleView.h; sourceTree = "<group>"; };
@@ -595,6 +598,7 @@
 		BC40B20F1F7CB30300B968D4 /* CustomView(自定义控件) */ = {
 			isa = PBXGroup;
 			children = (
+				BC9ED9ED1F8CC7CB00879220 /* MYParticleAnimation */,
 				BCD146251F8B5EE60083987E /* MYWaterFallLayout */,
 				BCD145861F8B21160083987E /* MYPageView */,
 				BC40B2101F7CB30300B968D4 /* MYPlacehoderTextView.h */,
@@ -778,6 +782,15 @@
 				BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC9ED9ED1F8CC7CB00879220 /* MYParticleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				BC9ED9EE1F8CC7CB00879220 /* CALayer+ParticleAnimation.h */,
+				BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */,
+			);
+			path = MYParticleAnimation;
 			sourceTree = "<group>";
 		};
 		BCD145861F8B21160083987E /* MYPageView */ = {
@@ -967,6 +980,7 @@
 				BC40B27A1F7CB30300B968D4 /* UITableView+YYAdd.m in Sources */,
 				BC374C7B1F8B73EE0054BD6A /* AFURLRequestSerialization.m in Sources */,
 				BC40B2911F7CB4D200B968D4 /* MYRankViewController.m in Sources */,
+				BC9ED9F01F8CC7CB00879220 /* CALayer+ParticleAnimation.m in Sources */,
 				BC40B2711F7CB30300B968D4 /* UIBezierPath+YYAdd.m in Sources */,
 				BC374CB81F8B79E30054BD6A /* NSObject+MJClass.m in Sources */,
 				BC374C7C1F8B73EE0054BD6A /* AFURLResponseSerialization.m in Sources */,

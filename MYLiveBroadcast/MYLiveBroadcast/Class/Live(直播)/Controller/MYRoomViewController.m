@@ -9,6 +9,7 @@
 #import "MYRoomViewController.h"
 #import "MYAnchorModel.h"
 #import "UIImageView+WebCache.h"
+#import "CALayer+ParticleAnimation.h"
 
 @interface MYRoomViewController ()
 
@@ -73,11 +74,24 @@
             NSLog(@"更多");
             break;
         case 104:
-            NSLog(@"关注");
+            [self starClick:sender];  // 星星
             break;
         default:
             break;
     }
+}
+
+- (void)starClick:(UIButton *)button
+{
+    CGPoint point = CGPointMake(button.center.x, self.bottomView.origin.y);
+    
+    if (button.isSelected) {
+        [self.view.layer stopRarticleAnimation];
+    } else {
+        [self.view.layer startParticleAnimationWithPoint:point];
+    }
+    
+    button.selected = !button.isSelected;
 }
 
 - (IBAction)follow  // 关注
