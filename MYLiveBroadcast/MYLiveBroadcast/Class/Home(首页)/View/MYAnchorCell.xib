@@ -73,6 +73,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="home_icon_live" width="16" height="16"/>
+        <image name="home_icon_live" width="23" height="13"/>
     </resources>
 </document>

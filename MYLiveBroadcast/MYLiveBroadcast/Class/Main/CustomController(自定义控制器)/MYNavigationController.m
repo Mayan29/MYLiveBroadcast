@@ -8,6 +8,7 @@
 
 #import "MYNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
+//#import <objc/runtime.h>
 
 @interface MYNavigationController () <UIGestureRecognizerDelegate>
 
@@ -82,10 +83,17 @@
 //    [super viewDidLoad];
 //
 //    // 全屏 Pop
+//    // 0. 获取私有属性名
+//    unsigned int count = 0;
+//    Ivar *ivars = class_copyIvarList(UIGestureRecognizer.class, &count);
+//    for (int i = 0; i < count; i++) {
+//        NSLog(@"%d : %s", i, ivar_getName(ivars[i]));
+//    }
+//    // 1. 获取 target 和 action
 //    id targetObjc = [[self.interactivePopGestureRecognizer valueForKey:@"_targets"] firstObject];
 //    id target = [targetObjc valueForKey:@"target"];
 //    SEL action = NSSelectorFromString(@"handleNavigationTransition:");
-//
+//    // 2. 将手势添加到 view 上
 //    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:action];
 //    pan.delegate = self;
 //    [self.view addGestureRecognizer:pan];
