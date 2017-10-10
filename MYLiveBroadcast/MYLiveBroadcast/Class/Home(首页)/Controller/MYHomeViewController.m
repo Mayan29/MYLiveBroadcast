@@ -30,10 +30,11 @@
     [self setupData];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+// MYNavigationController 中统一设置，这里就不用设置了
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
 
 #pragma mark - Set up UI
 - (void)setupNavigationBar
@@ -99,9 +100,8 @@
 {
     [self.navigationItem.titleView resignFirstResponder];
     
-    MYRoomViewController *roomVC = [[MYRoomViewController alloc] init];
+    MYRoomViewController *roomVC = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MYRoomViewController class]) owner:nil options:nil].lastObject;
     roomVC.model = model;
-    roomVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:roomVC animated:YES];
 }
 

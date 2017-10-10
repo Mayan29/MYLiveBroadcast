@@ -93,6 +93,7 @@
 		BC40B28E1F7CB4C800B968D4 /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B28D1F7CB4C800B968D4 /* MYProfileViewController.m */; };
 		BC40B2911F7CB4D200B968D4 /* MYRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */; };
 		BC63C6BF1F8B5FC500A2DA7B /* MYAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */; };
+		BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */; };
 		BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD145881F8B21160083987E /* MYPageContentView.m */; };
 		BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458A1F8B21160083987E /* MYPageTitleView.m */; };
 		BCD145911F8B21160083987E /* MYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458C1F8B21160083987E /* MYPageView.m */; };
@@ -297,6 +298,7 @@
 		BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYRankViewController.m; sourceTree = "<group>"; };
 		BC63C6BD1F8B5FC500A2DA7B /* MYAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAnchorViewController.h; sourceTree = "<group>"; };
 		BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAnchorViewController.m; sourceTree = "<group>"; };
+		BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYRoomViewController.xib; sourceTree = "<group>"; };
 		BCD145871F8B21160083987E /* MYPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageContentView.h; sourceTree = "<group>"; };
 		BCD145881F8B21160083987E /* MYPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageContentView.m; sourceTree = "<group>"; };
 		BCD145891F8B21160083987E /* MYPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageTitleView.h; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			children = (
 				BC374C371F8B6B920054BD6A /* MYRoomViewController.h */,
 				BC374C381F8B6B920054BD6A /* MYRoomViewController.m */,
+				BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 			files = (
 				BC374CC11F8C60430054BD6A /* MYAnchorCell.xib in Resources */,
 				BC40B1DB1F7CB0F400B968D4 /* Assets.xcassets in Resources */,
+				BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

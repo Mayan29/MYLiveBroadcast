@@ -67,7 +67,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.interactivePopGestureRecognizer.delegate = self;
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
@@ -76,10 +76,40 @@
     return (self.childViewControllers.count > 1);
 }
 
+// ios 11 之前只有如下方法才可以实现全屏 Pop
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//
+//    // 全屏 Pop
+//    id targetObjc = [[self.interactivePopGestureRecognizer valueForKey:@"_targets"] firstObject];
+//    id target = [targetObjc valueForKey:@"target"];
+//    SEL action = NSSelectorFromString(@"handleNavigationTransition:");
+//
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:action];
+//    pan.delegate = self;
+//    [self.view addGestureRecognizer:pan];
+//}
+//
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+//{
+//    // 当前控制器是否为根控制器
+//    BOOL isRootVC = self.viewControllers.count == 1;
+//    // 是否正在进行 push、pop 动画
+//    BOOL isTransitioning = [[self valueForKey:@"_isTransitioning"] boolValue];
+//
+//    return !isRootVC && !isTransitioning;
+//}
+
 
 #pragma mark - 控制器状态栏的颜色
-- (UIViewController *)childViewControllerForStatusBarStyle {
-    return self.topViewController;
+//- (UIViewController *)childViewControllerForStatusBarStyle {
+//    return self.topViewController;
+//}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 
