@@ -10,7 +10,7 @@
 
 @interface MYPageContentView : UICollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame childVCs:(NSArray <UIViewController *>*)childVCs parentVC:(UIViewController *)parentVC;
+- (instancetype)initWithFrame:(CGRect)frame childVCs:(NSArray <UIViewController *>*)childVCs;
 
 
 @end

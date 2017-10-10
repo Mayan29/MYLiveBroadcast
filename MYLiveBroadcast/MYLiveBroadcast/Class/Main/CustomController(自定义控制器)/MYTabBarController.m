@@ -24,7 +24,7 @@
 + (void)initialize
 {
     // 如果使用appearance,调用发短信,会修改系统的导航条,导致选取联系人按钮消失
-    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self.class]];
     
     NSDictionary *norAttr = @{
                               NSFontAttributeName : SYS_FONT(12),

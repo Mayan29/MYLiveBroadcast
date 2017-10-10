@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yny-gj-hXj" customClass="MYAnchorCell">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="326"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="326"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-5Q-de8">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="326"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-1I-TTy">
+                        <rect key="frame" x="199.5" y="8" width="23.5" height="13.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13.5" id="Tnj-gx-ljm"/>
+                            <constraint firstAttribute="width" constant="23.5" id="Xv3-0C-NUz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anl-DW-ppP">
+                        <rect key="frame" x="8" y="295" width="26.5" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="JDD-5j-089"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在线人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYe-Wt-cpv">
+                        <rect key="frame" x="8" y="308" width="41" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="Tgr-4O-0A7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="XLR-5Q-de8" firstAttribute="leading" secondItem="yny-gj-hXj" secondAttribute="leading" id="3Cu-mZ-HLN"/>
+                <constraint firstItem="XLR-5Q-de8" firstAttribute="top" secondItem="yny-gj-hXj" secondAttribute="top" id="4zv-Ug-REz"/>
+                <constraint firstItem="KYe-Wt-cpv" firstAttribute="leading" secondItem="yny-gj-hXj" secondAttribute="leading" constant="8" id="7r2-Gr-9pv"/>
+                <constraint firstAttribute="bottom" secondItem="anl-DW-ppP" secondAttribute="bottom" constant="21" id="Iuw-Bb-Onk"/>
+                <constraint firstAttribute="trailing" secondItem="XLR-5Q-de8" secondAttribute="trailing" id="LPX-1t-AjT"/>
+                <constraint firstAttribute="bottom" secondItem="KYe-Wt-cpv" secondAttribute="bottom" constant="8" id="fv3-46-Cun"/>
+                <constraint firstItem="anl-DW-ppP" firstAttribute="leading" secondItem="yny-gj-hXj" secondAttribute="leading" constant="8" id="gUg-lY-lV8"/>
+                <constraint firstAttribute="trailing" secondItem="U3h-1I-TTy" secondAttribute="trailing" constant="8" id="hgy-L2-Wed"/>
+                <constraint firstAttribute="bottom" secondItem="XLR-5Q-de8" secondAttribute="bottom" id="l81-dG-kp2"/>
+                <constraint firstItem="U3h-1I-TTy" firstAttribute="top" secondItem="yny-gj-hXj" secondAttribute="top" constant="8" id="tH7-1p-b8g"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="k4A-GY-Om0"/>
+            <size key="customSize" width="231" height="326"/>
+            <connections>
+                <outlet property="isLivingIcon" destination="U3h-1I-TTy" id="mYB-Od-Uhx"/>
+                <outlet property="name" destination="anl-DW-ppP" id="Rbx-FG-yiM"/>
+                <outlet property="photo" destination="XLR-5Q-de8" id="MAr-98-amv"/>
+                <outlet property="watchingNum" destination="KYe-Wt-cpv" id="ZQ3-fc-Ct8"/>
+            </connections>
+            <point key="canvasLocation" x="-147.5" y="23"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="16" height="16"/>
+    </resources>
+</document>

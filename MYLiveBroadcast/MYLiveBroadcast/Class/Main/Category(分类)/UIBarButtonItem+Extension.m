@@ -15,9 +15,9 @@
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[UIImage imageNamed:higImage] forState:UIControlStateHighlighted];
-    btn.size = btn.currentBackgroundImage.size;
+    [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:higImage] forState:UIControlStateHighlighted];
+    btn.size = CGSizeMake(44, 44);
     
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
@@ -26,9 +26,9 @@
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[UIImage imageNamed:selImage] forState:UIControlStateSelected];
-    btn.size = btn.currentBackgroundImage.size;
+    [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:selImage] forState:UIControlStateSelected];
+    btn.size = CGSizeMake(44, 44);
     
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }

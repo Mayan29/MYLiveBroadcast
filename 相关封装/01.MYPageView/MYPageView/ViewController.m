@@ -36,7 +36,7 @@
     MYPageViewStyle *style = [[MYPageViewStyle alloc] init];
     
     
-    MYPageView *pageView = [[MYPageView alloc] initWithFrame:frame titles:titles childVCs:childVCs parentVC:self style:style];
+    MYPageView *pageView = [[MYPageView alloc] initWithFrame:frame titles:titles childVCs:childVCs style:style];
     [self.view addSubview:pageView];
 }
 

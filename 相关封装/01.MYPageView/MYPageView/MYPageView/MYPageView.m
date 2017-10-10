@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) NSArray <NSString *>*titles;
 @property (nonatomic, strong) NSArray <UIViewController *>*childVCs;
-@property (nonatomic, strong) UIViewController *parentVC;
 @property (nonatomic, strong) MYPageViewStyle *style;
 
 @end
@@ -25,7 +24,6 @@
 - (instancetype)initWithFrame:(CGRect)frame
                        titles:(NSArray<NSString *> *)titles
                      childVCs:(NSArray<UIViewController *> *)childVCs
-                     parentVC:(UIViewController *)parentVC
                         style:(MYPageViewStyle *)style
 {
     self = [super initWithFrame:frame];
@@ -35,7 +33,6 @@
         
         _titles   = titles;
         _childVCs = childVCs;
-        _parentVC = parentVC;
         _style    = style ? style : [[MYPageViewStyle alloc] init];
         
         [self setupUI];
@@ -53,7 +50,7 @@
     MYPageTitleView *titleView = [[MYPageTitleView alloc] initWithFrame:titleViewF titles:_titles style:_style];
     [self addSubview:titleView];
     
-    MYPageContentView *contentView = [[MYPageContentView alloc] initWithFrame:contentViewF childVCs:_childVCs parentVC:_parentVC];
+    MYPageContentView *contentView = [[MYPageContentView alloc] initWithFrame:contentViewF childVCs:_childVCs];
     [self addSubview:contentView];    
 }
 

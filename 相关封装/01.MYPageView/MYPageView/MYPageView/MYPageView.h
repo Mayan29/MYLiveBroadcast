@@ -11,6 +11,9 @@
 
 @interface MYPageView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles childVCs:(NSArray <UIViewController *>*)childVCs parentVC:(UIViewController *)parentVC style:(MYPageViewStyle *)style;
+- (instancetype)initWithFrame:(CGRect)frame
+                       titles:(NSArray <NSString *>*)titles
+                     childVCs:(NSArray <UIViewController *>*)childVCs
+                        style:(MYPageViewStyle *)style;
 
 @end

@@ -12,7 +12,6 @@
 @interface MYPageContentView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) NSArray <UIViewController *>*childVCs;
-@property (nonatomic, weak  ) UIViewController *parentVC;
 
 @property (nonatomic, assign) NSInteger currentRow;
 
@@ -24,7 +23,7 @@ static NSString *identifier = @"MYContentViewCell";
 @implementation MYPageContentView
 
 #pragma mark - Init
-- (instancetype)initWithFrame:(CGRect)frame childVCs:(NSArray <UIViewController *>*)childVCs parentVC:(UIViewController *)parentVC
+- (instancetype)initWithFrame:(CGRect)frame childVCs:(NSArray <UIViewController *>*)childVCs
 {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = frame.size;
@@ -44,10 +43,6 @@ static NSString *identifier = @"MYContentViewCell";
         [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
         
         _childVCs = childVCs;
-        _parentVC = parentVC;
-        for (UIViewController *vc in childVCs) {
-            [parentVC addChildViewController:vc];
-        }
         
         // 注册通知（点击 titleView 改变 contentView 位置）
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewMakePageContentViewScroll:) name:@"MYPageTitleViewMakeMYPageContentViewScroll" object:nil];

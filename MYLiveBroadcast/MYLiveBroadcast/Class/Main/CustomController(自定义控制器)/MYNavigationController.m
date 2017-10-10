@@ -20,7 +20,7 @@
 + (void)initialize
 {
     // 1.设置标题栏字体颜色和大小
-    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:self, nil];
+    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self.class]];
     [bar setTitleTextAttributes:@{
                                   NSFontAttributeName : SYS_FONT(15),
                                   NSForegroundColorAttributeName : [UIColor orangeColor]
@@ -28,7 +28,7 @@
     [bar setBarTintColor:[UIColor blackColor]];
     
     // 2.设置Item主题样式（高亮颜色尚未处理完善、可用类别创建文字按钮）
-    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
+    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[self.class]];
     [item setTitleTextAttributes:@{
                                    NSFontAttributeName : SYS_FONT(15),
                                    NSForegroundColorAttributeName : [UIColor blackColor]

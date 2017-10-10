@@ -9,6 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class MYAnchorModel;
 @interface MYAnchorViewController : UIViewController
+
+@property (nonatomic, strong) NSArray <MYAnchorModel *>*dataArray;
+
+@property (nonatomic, strong) void (^itemClickBlock)(MYAnchorModel *model);
+
 
 @end
