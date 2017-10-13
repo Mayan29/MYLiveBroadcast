@@ -7,14 +7,14 @@
 //
 
 #import "MYHomeViewController.h"
-#import "MYPageView.h"
+#import "MYScrollPageView.h"
 #import "MYAnchorViewController.h"
 #import "MYRoomViewController.h"
 #import "MYHomeDataService.h"
 
 @interface MYHomeViewController () <UISearchBarDelegate>
 
-@property (nonatomic, strong) MYPageView *pageView;
+@property (nonatomic, strong) MYScrollPageView *pageView;
 
 @end
 
@@ -65,10 +65,10 @@
         [childVCs addObject:vc];
     }
     // 4. 样式
-    MYPageViewStyle *style = [[MYPageViewStyle alloc] init];
+    MYScrollPageStyle *style = [[MYScrollPageStyle alloc] init];
     
     
-    _pageView = [[MYPageView alloc] initWithFrame:frame titles:titles childVCs:childVCs style:style];
+    _pageView = [[MYScrollPageView alloc] initWithFrame:frame titles:titles childVCs:childVCs style:style];
     [self.view addSubview:_pageView];
 }
 

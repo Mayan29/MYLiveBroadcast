@@ -93,12 +93,14 @@
 		BC40B28E1F7CB4C800B968D4 /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B28D1F7CB4C800B968D4 /* MYProfileViewController.m */; };
 		BC40B2911F7CB4D200B968D4 /* MYRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */; };
 		BC63C6BF1F8B5FC500A2DA7B /* MYAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */; };
+		BC7658A81F90CF1600104BEF /* MYScrollPageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658A11F90CF1600104BEF /* MYScrollPageCollectionView.m */; };
+		BC7658A91F90CF1600104BEF /* MYScrollPageStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658A31F90CF1600104BEF /* MYScrollPageStyle.m */; };
+		BC7658AA1F90CF1600104BEF /* MYScrollPageTitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658A51F90CF1600104BEF /* MYScrollPageTitleBar.m */; };
+		BC7658AB1F90CF1600104BEF /* MYScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658A71F90CF1600104BEF /* MYScrollPageView.m */; };
+		BC7658B61F90D17000104BEF /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658B31F90D16F00104BEF /* YYFPSLabel.m */; };
+		BC7658B71F90D17000104BEF /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7658B51F90D16F00104BEF /* YYWeakProxy.m */; };
 		BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */; };
 		BC9ED9F01F8CC7CB00879220 /* CALayer+ParticleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */; };
-		BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD145881F8B21160083987E /* MYPageContentView.m */; };
-		BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458A1F8B21160083987E /* MYPageTitleView.m */; };
-		BCD145911F8B21160083987E /* MYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458C1F8B21160083987E /* MYPageView.m */; };
-		BCD145921F8B21160083987E /* MYPageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1458E1F8B21160083987E /* MYPageViewStyle.m */; };
 		BCD146281F8B5EE60083987E /* MYWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD146271F8B5EE60083987E /* MYWaterFallLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -299,17 +301,21 @@
 		BC40B2901F7CB4D200B968D4 /* MYRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYRankViewController.m; sourceTree = "<group>"; };
 		BC63C6BD1F8B5FC500A2DA7B /* MYAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAnchorViewController.h; sourceTree = "<group>"; };
 		BC63C6BE1F8B5FC500A2DA7B /* MYAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAnchorViewController.m; sourceTree = "<group>"; };
+		BC7658A01F90CF1600104BEF /* MYScrollPageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYScrollPageCollectionView.h; sourceTree = "<group>"; };
+		BC7658A11F90CF1600104BEF /* MYScrollPageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYScrollPageCollectionView.m; sourceTree = "<group>"; };
+		BC7658A21F90CF1600104BEF /* MYScrollPageStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYScrollPageStyle.h; sourceTree = "<group>"; };
+		BC7658A31F90CF1600104BEF /* MYScrollPageStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYScrollPageStyle.m; sourceTree = "<group>"; };
+		BC7658A41F90CF1600104BEF /* MYScrollPageTitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYScrollPageTitleBar.h; sourceTree = "<group>"; };
+		BC7658A51F90CF1600104BEF /* MYScrollPageTitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYScrollPageTitleBar.m; sourceTree = "<group>"; };
+		BC7658A61F90CF1600104BEF /* MYScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYScrollPageView.h; sourceTree = "<group>"; };
+		BC7658A71F90CF1600104BEF /* MYScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYScrollPageView.m; sourceTree = "<group>"; };
+		BC7658B21F90D16F00104BEF /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		BC7658B31F90D16F00104BEF /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		BC7658B41F90D16F00104BEF /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		BC7658B51F90D16F00104BEF /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYRoomViewController.xib; sourceTree = "<group>"; };
 		BC9ED9EE1F8CC7CB00879220 /* CALayer+ParticleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ParticleAnimation.h"; sourceTree = "<group>"; };
 		BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ParticleAnimation.m"; sourceTree = "<group>"; };
-		BCD145871F8B21160083987E /* MYPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageContentView.h; sourceTree = "<group>"; };
-		BCD145881F8B21160083987E /* MYPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageContentView.m; sourceTree = "<group>"; };
-		BCD145891F8B21160083987E /* MYPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageTitleView.h; sourceTree = "<group>"; };
-		BCD1458A1F8B21160083987E /* MYPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageTitleView.m; sourceTree = "<group>"; };
-		BCD1458B1F8B21160083987E /* MYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageView.h; sourceTree = "<group>"; };
-		BCD1458C1F8B21160083987E /* MYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageView.m; sourceTree = "<group>"; };
-		BCD1458D1F8B21160083987E /* MYPageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPageViewStyle.h; sourceTree = "<group>"; };
-		BCD1458E1F8B21160083987E /* MYPageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPageViewStyle.m; sourceTree = "<group>"; };
 		BCD146261F8B5EE60083987E /* MYWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWaterFallLayout.h; sourceTree = "<group>"; };
 		BCD146271F8B5EE60083987E /* MYWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYWaterFallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,9 +604,9 @@
 		BC40B20F1F7CB30300B968D4 /* CustomView(自定义控件) */ = {
 			isa = PBXGroup;
 			children = (
+				BC76589F1F90CF1600104BEF /* MYScrollPageView */,
 				BC9ED9ED1F8CC7CB00879220 /* MYParticleAnimation */,
 				BCD146251F8B5EE60083987E /* MYWaterFallLayout */,
-				BCD145861F8B21160083987E /* MYPageView */,
 				BC40B2101F7CB30300B968D4 /* MYPlacehoderTextView.h */,
 				BC40B2111F7CB30300B968D4 /* MYPlacehoderTextView.m */,
 			);
@@ -610,6 +616,7 @@
 		BC40B2151F7CB30300B968D4 /* ThirdLib(三方静态库) */ = {
 			isa = PBXGroup;
 			children = (
+				BC7658B11F90D16F00104BEF /* YYFPSLabel */,
 				BC374C9D1F8B79E30054BD6A /* MJExtension */,
 				BC374C3F1F8B73EE0054BD6A /* AFNetworking */,
 				BC374C4D1F8B73EE0054BD6A /* MBProgressHUD */,
@@ -784,6 +791,32 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BC76589F1F90CF1600104BEF /* MYScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				BC7658A01F90CF1600104BEF /* MYScrollPageCollectionView.h */,
+				BC7658A11F90CF1600104BEF /* MYScrollPageCollectionView.m */,
+				BC7658A21F90CF1600104BEF /* MYScrollPageStyle.h */,
+				BC7658A31F90CF1600104BEF /* MYScrollPageStyle.m */,
+				BC7658A41F90CF1600104BEF /* MYScrollPageTitleBar.h */,
+				BC7658A51F90CF1600104BEF /* MYScrollPageTitleBar.m */,
+				BC7658A61F90CF1600104BEF /* MYScrollPageView.h */,
+				BC7658A71F90CF1600104BEF /* MYScrollPageView.m */,
+			);
+			path = MYScrollPageView;
+			sourceTree = "<group>";
+		};
+		BC7658B11F90D16F00104BEF /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				BC7658B21F90D16F00104BEF /* YYFPSLabel.h */,
+				BC7658B31F90D16F00104BEF /* YYFPSLabel.m */,
+				BC7658B41F90D16F00104BEF /* YYWeakProxy.h */,
+				BC7658B51F90D16F00104BEF /* YYWeakProxy.m */,
+			);
+			path = YYFPSLabel;
+			sourceTree = "<group>";
+		};
 		BC9ED9ED1F8CC7CB00879220 /* MYParticleAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,21 +824,6 @@
 				BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */,
 			);
 			path = MYParticleAnimation;
-			sourceTree = "<group>";
-		};
-		BCD145861F8B21160083987E /* MYPageView */ = {
-			isa = PBXGroup;
-			children = (
-				BCD145871F8B21160083987E /* MYPageContentView.h */,
-				BCD145881F8B21160083987E /* MYPageContentView.m */,
-				BCD145891F8B21160083987E /* MYPageTitleView.h */,
-				BCD1458A1F8B21160083987E /* MYPageTitleView.m */,
-				BCD1458B1F8B21160083987E /* MYPageView.h */,
-				BCD1458C1F8B21160083987E /* MYPageView.m */,
-				BCD1458D1F8B21160083987E /* MYPageViewStyle.h */,
-				BCD1458E1F8B21160083987E /* MYPageViewStyle.m */,
-			);
-			path = MYPageView;
 			sourceTree = "<group>";
 		};
 		BCD146251F8B5EE60083987E /* MYWaterFallLayout */ = {
@@ -952,25 +970,24 @@
 			files = (
 				BC40B2611F7CB30300B968D4 /* NSData+YYAdd.m in Sources */,
 				BC40B25F1F7CB30300B968D4 /* NSArray+YYAdd.m in Sources */,
+				BC7658AA1F90CF1600104BEF /* MYScrollPageTitleBar.m in Sources */,
 				BC40B2761F7CB30300B968D4 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				BC40B25A1F7CB30300B968D4 /* UIBarButtonItem+Extension.m in Sources */,
 				BC374C8E1F8B73EE0054BD6A /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC40B25C1F7CB30300B968D4 /* MYTabBarController.m in Sources */,
 				BC40B26C1F7CB30300B968D4 /* NSTimer+YYAdd.m in Sources */,
 				BC40B26D1F7CB30300B968D4 /* CALayer+YYAdd.m in Sources */,
-				BCD145921F8B21160083987E /* MYPageViewStyle.m in Sources */,
 				BC374CB71F8B79E30054BD6A /* MJPropertyType.m in Sources */,
-				BCD145911F8B21160083987E /* MYPageView.m in Sources */,
 				BC374C841F8B73EE0054BD6A /* SDWebImageCompat.m in Sources */,
 				BC374C851F8B73EE0054BD6A /* SDWebImageDecoder.m in Sources */,
 				BC40B2651F7CB30300B968D4 /* NSNotificationCenter+YYAdd.m in Sources */,
 				BC40B28B1F7CB4BC00B968D4 /* MYDiscoverViewController.m in Sources */,
+				BC7658B71F90D17000104BEF /* YYWeakProxy.m in Sources */,
 				BC374C8C1F8B73EE0054BD6A /* UIImage+MultiFormat.m in Sources */,
 				BC40B26E1F7CB30300B968D4 /* YYCGUtilities.m in Sources */,
 				BC374C791F8B73EE0054BD6A /* AFNetworkReachabilityManager.m in Sources */,
 				BC374C801F8B73EE0054BD6A /* NSData+ImageContentType.m in Sources */,
 				BC374C3E1F8B6C620054BD6A /* MYAnchorModel.m in Sources */,
-				BCD145901F8B21160083987E /* MYPageTitleView.m in Sources */,
 				BC374C9C1F8B78460054BD6A /* MYHomeDataService.m in Sources */,
 				BC374C871F8B73EE0054BD6A /* SDWebImageDownloaderOperation.m in Sources */,
 				BC374C391F8B6B920054BD6A /* MYRoomViewController.m in Sources */,
@@ -991,6 +1008,7 @@
 				BC374CB51F8B79E30054BD6A /* MJProperty.m in Sources */,
 				BC374C7F1F8B73EE0054BD6A /* MKAnnotationView+WebCache.m in Sources */,
 				BC374C911F8B73EE0054BD6A /* UIView+WebCacheOperation.m in Sources */,
+				BC7658B61F90D17000104BEF /* YYFPSLabel.m in Sources */,
 				BC40B2721F7CB30300B968D4 /* UIColor+YYAdd.m in Sources */,
 				BC40B25B1F7CB30300B968D4 /* MYNavigationController.m in Sources */,
 				BC40B2661F7CB30300B968D4 /* NSNumber+YYAdd.m in Sources */,
@@ -1010,20 +1028,22 @@
 				BC374CB91F8B79E30054BD6A /* NSObject+MJCoding.m in Sources */,
 				BC40B2751F7CB30300B968D4 /* UIFont+YYAdd.m in Sources */,
 				BC374C7E1F8B73EE0054BD6A /* MBProgressHUD.m in Sources */,
-				BCD1458F1F8B21160083987E /* MYPageContentView.m in Sources */,
 				BC374C991F8B76D00054BD6A /* MYHTTPTool.m in Sources */,
 				BC40B2671F7CB30300B968D4 /* NSObject+YYAdd.m in Sources */,
+				BC7658A91F90CF1600104BEF /* MYScrollPageStyle.m in Sources */,
 				BC374C8F1F8B73EE0054BD6A /* UIImageView+WebCache.m in Sources */,
 				BCD146281F8B5EE60083987E /* MYWaterFallLayout.m in Sources */,
 				BC40B2741F7CB30300B968D4 /* UIDevice+YYAdd.m in Sources */,
 				BC374C8B1F8B73EE0054BD6A /* UIImage+GIF.m in Sources */,
 				BC374C901F8B73EE0054BD6A /* UIView+WebCache.m in Sources */,
+				BC7658AB1F90CF1600104BEF /* MYScrollPageView.m in Sources */,
 				BC40B26F1F7CB30300B968D4 /* UIApplication+YYAdd.m in Sources */,
 				BC40B2621F7CB30300B968D4 /* NSDate+YYAdd.m in Sources */,
 				BC374C781F8B73EE0054BD6A /* AFHTTPSessionManager.m in Sources */,
 				BC374CBC1F8B79E30054BD6A /* NSString+MJExtension.m in Sources */,
 				BC40B2601F7CB30300B968D4 /* NSBundle+YYAdd.m in Sources */,
 				BC374C7D1F8B73EE0054BD6A /* AFURLSessionManager.m in Sources */,
+				BC7658A81F90CF1600104BEF /* MYScrollPageCollectionView.m in Sources */,
 				BC374C7A1F8B73EE0054BD6A /* AFSecurityPolicy.m in Sources */,
 				BC40B2881F7CB49B00B968D4 /* MYHomeViewController.m in Sources */,
 				BC374C821F8B73EE0054BD6A /* SDImageCache.m in Sources */,
