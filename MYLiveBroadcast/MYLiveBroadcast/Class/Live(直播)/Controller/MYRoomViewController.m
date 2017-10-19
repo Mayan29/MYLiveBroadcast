@@ -10,6 +10,7 @@
 #import "MYAnchorModel.h"
 #import "UIImageView+WebCache.h"
 #import "CALayer+ParticleAnimation.h"
+#import "MYGiftKeyboard.h"
 
 @interface MYRoomViewController ()
 
@@ -20,11 +21,38 @@
 @property (weak, nonatomic) IBOutlet UILabel     *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *roomIdLabel;
 
+@property (nonatomic, strong) MYGiftKeyboard *giftKeyboard;
+
 @end
 
 @implementation MYRoomViewController
 
 #pragma mark - init
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // 1. 标题
+    NSArray *titles = @[@"热门", @"高级", @"豪华", @"专属"];
+    // 2. 样式
+    MYGiftKeyboardStyle *style = [[MYGiftKeyboardStyle alloc] init];
+    // 3. 传入模型（模型需要根据数据情况自行封装）
+    NSMutableArray *models = [NSMutableArray array];
+    for (int i = 0; i < titles.count; i++) {
+        NSMutableArray *arr = [NSMutableArray array];
+        for (int j = 0; j < 10; j++) {
+            [arr addObject:[[MYGiftKeyboardModel alloc] init]];
+        }
+        [models addObject:arr];
+    }
+    
+    _giftKeyboard = [MYGiftKeyboard keyboardWithTitles:titles style:style models:models];
+    _giftKeyboard.commitClickBlock = ^(MYGiftKeyboardModel *model) {
+        NSLog(@"点击了 %@", model);
+    };
+    [self.view addSubview:_giftKeyboard];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -68,7 +96,7 @@
             NSLog(@"分享");
             break;
         case 102:
-            NSLog(@"礼物");
+            [self giftClick:sender];  // 礼物
             break;
         case 103:
             NSLog(@"更多");
@@ -92,6 +120,11 @@
     }
     
     button.selected = !button.isSelected;
+}
+
+- (void)giftClick:(UIButton *)button
+{
+    [_giftKeyboard showKeyboard];
 }
 
 - (IBAction)follow  // 关注
