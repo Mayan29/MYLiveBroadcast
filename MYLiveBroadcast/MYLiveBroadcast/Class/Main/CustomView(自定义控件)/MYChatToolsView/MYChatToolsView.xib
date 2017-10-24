@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MrS-gW-IKC" customClass="MYChatToolsView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-wq-ztC">
+                    <rect key="frame" x="310" y="5" width="60" height="34"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="FV0-Ke-mSI"/>
+                        <constraint firstAttribute="height" constant="34" id="vZB-Di-gVA"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sendMsgClick:" destination="MrS-gW-IKC" eventType="touchUpInside" id="lQd-IM-PZJ"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8O-yj-BBR" customClass="MYPlacehoderTextView">
+                    <rect key="frame" x="5" y="5" width="300" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="A8O-yj-BBR" secondAttribute="bottom" constant="5" id="5nD-gr-cGh"/>
+                <constraint firstItem="A8O-yj-BBR" firstAttribute="leading" secondItem="MrS-gW-IKC" secondAttribute="leading" constant="5" id="OeH-5F-lFg"/>
+                <constraint firstAttribute="trailing" secondItem="jhe-wq-ztC" secondAttribute="trailing" constant="5" id="QEo-nS-Q4V"/>
+                <constraint firstItem="A8O-yj-BBR" firstAttribute="top" secondItem="MrS-gW-IKC" secondAttribute="top" constant="5" id="ndS-tg-l60"/>
+                <constraint firstItem="jhe-wq-ztC" firstAttribute="leading" secondItem="A8O-yj-BBR" secondAttribute="trailing" constant="5" id="qFg-rA-fhX"/>
+                <constraint firstAttribute="bottom" secondItem="jhe-wq-ztC" secondAttribute="bottom" constant="5" id="uBb-tb-Zxe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputTextView" destination="A8O-yj-BBR" id="UNd-bY-Ged"/>
+                <outlet property="sendMsgButton" destination="jhe-wq-ztC" id="aCg-Zn-Xwz"/>
+            </connections>
+            <point key="canvasLocation" x="-249" y="-81"/>
+        </view>
+    </objects>
+</document>

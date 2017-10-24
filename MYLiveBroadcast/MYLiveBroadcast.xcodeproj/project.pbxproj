@@ -57,7 +57,6 @@
 		BC40B25A1F7CB30300B968D4 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2091F7CB30300B968D4 /* UIBarButtonItem+Extension.m */; };
 		BC40B25B1F7CB30300B968D4 /* MYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B20C1F7CB30300B968D4 /* MYNavigationController.m */; };
 		BC40B25C1F7CB30300B968D4 /* MYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B20E1F7CB30300B968D4 /* MYTabBarController.m */; };
-		BC40B25D1F7CB30300B968D4 /* MYPlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2111F7CB30300B968D4 /* MYPlacehoderTextView.m */; };
 		BC40B25F1F7CB30300B968D4 /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B2191F7CB30300B968D4 /* NSArray+YYAdd.m */; };
 		BC40B2601F7CB30300B968D4 /* NSBundle+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B21B1F7CB30300B968D4 /* NSBundle+YYAdd.m */; };
 		BC40B2611F7CB30300B968D4 /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = BC40B21D1F7CB30300B968D4 /* NSData+YYAdd.m */; };
@@ -110,6 +109,10 @@
 		BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9ED9EB1F8C6FB200879220 /* MYRoomViewController.xib */; };
 		BC9ED9F01F8CC7CB00879220 /* CALayer+ParticleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */; };
 		BCD146281F8B5EE60083987E /* MYWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD146271F8B5EE60083987E /* MYWaterFallLayout.m */; };
+		BCD6CE861F9F321400C14880 /* MYChatToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6CE801F9F321400C14880 /* MYChatToolsView.m */; };
+		BCD6CE871F9F321400C14880 /* MYChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD6CE811F9F321400C14880 /* MYChatToolsView.xib */; };
+		BCD6CE881F9F321400C14880 /* MYChatToolsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCD6CE821F9F321400C14880 /* MYChatToolsViewResources.bundle */; };
+		BCD6CE8D1F9F323400C14880 /* MYPlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6CE8C1F9F323400C14880 /* MYPlacehoderTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +345,12 @@
 		BC9ED9EF1F8CC7CB00879220 /* CALayer+ParticleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ParticleAnimation.m"; sourceTree = "<group>"; };
 		BCD146261F8B5EE60083987E /* MYWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWaterFallLayout.h; sourceTree = "<group>"; };
 		BCD146271F8B5EE60083987E /* MYWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYWaterFallLayout.m; sourceTree = "<group>"; };
+		BCD6CE7F1F9F321400C14880 /* MYChatToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChatToolsView.h; sourceTree = "<group>"; };
+		BCD6CE801F9F321400C14880 /* MYChatToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYChatToolsView.m; sourceTree = "<group>"; };
+		BCD6CE811F9F321400C14880 /* MYChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYChatToolsView.xib; sourceTree = "<group>"; };
+		BCD6CE821F9F321400C14880 /* MYChatToolsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MYChatToolsViewResources.bundle; sourceTree = "<group>"; };
+		BCD6CE8B1F9F323400C14880 /* MYPlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPlacehoderTextView.h; sourceTree = "<group>"; };
+		BCD6CE8C1F9F323400C14880 /* MYPlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPlacehoderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -628,6 +637,8 @@
 		BC40B20F1F7CB30300B968D4 /* CustomView(自定义控件) */ = {
 			isa = PBXGroup;
 			children = (
+				BCD6CE8A1F9F323400C14880 /* MYPlacehoderTextView */,
+				BCD6CE7E1F9F321400C14880 /* MYChatToolsView */,
 				BC7A70471F98454000E334D1 /* MYGiftKeyboard */,
 				BC76589F1F90CF1600104BEF /* MYScrollPageView */,
 				BC9ED9ED1F8CC7CB00879220 /* MYParticleAnimation */,
@@ -883,6 +894,26 @@
 			path = MYWaterFallLayout;
 			sourceTree = "<group>";
 		};
+		BCD6CE7E1F9F321400C14880 /* MYChatToolsView */ = {
+			isa = PBXGroup;
+			children = (
+				BCD6CE7F1F9F321400C14880 /* MYChatToolsView.h */,
+				BCD6CE801F9F321400C14880 /* MYChatToolsView.m */,
+				BCD6CE811F9F321400C14880 /* MYChatToolsView.xib */,
+				BCD6CE821F9F321400C14880 /* MYChatToolsViewResources.bundle */,
+			);
+			path = MYChatToolsView;
+			sourceTree = "<group>";
+		};
+		BCD6CE8A1F9F323400C14880 /* MYPlacehoderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				BCD6CE8B1F9F323400C14880 /* MYPlacehoderTextView.h */,
+				BCD6CE8C1F9F323400C14880 /* MYPlacehoderTextView.m */,
+			);
+			path = MYPlacehoderTextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -991,6 +1022,8 @@
 			files = (
 				BC374CC11F8C60430054BD6A /* MYAnchorCell.xib in Resources */,
 				BC40B1DB1F7CB0F400B968D4 /* Assets.xcassets in Resources */,
+				BCD6CE871F9F321400C14880 /* MYChatToolsView.xib in Resources */,
+				BCD6CE881F9F321400C14880 /* MYChatToolsViewResources.bundle in Resources */,
 				BC9ED9EC1F8C6FB200879220 /* MYRoomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1026,6 +1059,7 @@
 				BC374C8E1F8B73EE0054BD6A /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC40B25C1F7CB30300B968D4 /* MYTabBarController.m in Sources */,
 				BC40B26C1F7CB30300B968D4 /* NSTimer+YYAdd.m in Sources */,
+				BCD6CE8D1F9F323400C14880 /* MYPlacehoderTextView.m in Sources */,
 				BC40B26D1F7CB30300B968D4 /* CALayer+YYAdd.m in Sources */,
 				BC374CB71F8B79E30054BD6A /* MJPropertyType.m in Sources */,
 				BC374C841F8B73EE0054BD6A /* SDWebImageCompat.m in Sources */,
@@ -1046,6 +1080,7 @@
 				BC374C861F8B73EE0054BD6A /* SDWebImageDownloader.m in Sources */,
 				BC40B28E1F7CB4C800B968D4 /* MYProfileViewController.m in Sources */,
 				BC7A705F1F98454000E334D1 /* MYGiftKeyboardTitleBar.m in Sources */,
+				BCD6CE861F9F321400C14880 /* MYChatToolsView.m in Sources */,
 				BC40B26A1F7CB30300B968D4 /* NSString+YYAdd.m in Sources */,
 				BC40B27A1F7CB30300B968D4 /* UITableView+YYAdd.m in Sources */,
 				BC374C7B1F8B73EE0054BD6A /* AFURLRequestSerialization.m in Sources */,
@@ -1112,7 +1147,6 @@
 				BC40B2701F7CB30300B968D4 /* UIBarButtonItem+YYAdd.m in Sources */,
 				BC374C891F8B73EE0054BD6A /* SDWebImagePrefetcher.m in Sources */,
 				BC374C8D1F8B73EE0054BD6A /* UIImage+WebP.m in Sources */,
-				BC40B25D1F7CB30300B968D4 /* MYPlacehoderTextView.m in Sources */,
 				BC40B1E11F7CB0F400B968D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

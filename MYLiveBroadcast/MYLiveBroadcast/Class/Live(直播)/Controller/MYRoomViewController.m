@@ -11,8 +11,9 @@
 #import "UIImageView+WebCache.h"
 #import "CALayer+ParticleAnimation.h"
 #import "MYGiftKeyboard.h"
+#import "MYChatToolsView.h"
 
-@interface MYRoomViewController ()
+@interface MYRoomViewController () <MYChatToolsViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UIView      *bottomView;
@@ -21,7 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel     *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *roomIdLabel;
 
-@property (nonatomic, strong) MYGiftKeyboard *giftKeyboard;
+@property (nonatomic, strong) MYChatToolsView *chatToolsView;
+@property (nonatomic, strong) MYGiftKeyboard  *giftKeyboard;
 
 @end
 
@@ -32,11 +34,17 @@
 {
     [super viewDidLoad];
     
-    // 1. 标题
+    
+    // 1. 聊天工具条
+    _chatToolsView = [MYChatToolsView chatToolsViewWithSuperView:self.view andDelegate:self];
+    
+    
+    // 2. 礼物键盘
+    // 标题
     NSArray *titles = @[@"热门", @"高级", @"豪华", @"专属"];
-    // 2. 样式
+    // 样式
     MYGiftKeyboardStyle *style = [[MYGiftKeyboardStyle alloc] init];
-    // 3. 传入模型（模型需要根据数据情况自行封装）
+    // 传入模型（模型需要根据数据情况自行封装）
     NSMutableArray *models = [NSMutableArray array];
     for (int i = 0; i < titles.count; i++) {
         NSMutableArray *arr = [NSMutableArray array];
@@ -90,7 +98,7 @@
 {
     switch (sender.tag) {
         case 100:
-            NSLog(@"聊天");
+            [self chatClick:sender];  // 聊天
             break;
         case 101:
             NSLog(@"分享");
@@ -107,6 +115,12 @@
         default:
             break;
     }
+}
+
+
+- (void)chatClick:(UIButton *)button
+{
+    [_chatToolsView showKeyboard];
 }
 
 - (void)starClick:(UIButton *)button
@@ -140,6 +154,13 @@
 - (IBAction)people
 {
     
+}
+
+
+#pragma mark - MYChatToolsViewDelegate
+- (void)chatToolsView:(MYChatToolsView *)chatToolsView message:(NSString *)message
+{
+    NSLog(@"%@", message);
 }
 
 @end
