@@ -13,10 +13,11 @@
 #import "MYGiftKeyboard.h"
 #import "MYChatToolsView.h"
 
-@interface MYRoomViewController () <MYChatToolsViewDelegate>
+@interface MYRoomViewController () <MYChatToolsViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UIView      *bottomView;
+@property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel     *nameLabel;
@@ -24,6 +25,8 @@
 
 @property (nonatomic, strong) MYChatToolsView *chatToolsView;
 @property (nonatomic, strong) MYGiftKeyboard  *giftKeyboard;
+
+@property (nonatomic, strong) NSMutableArray *chatsArray;
 
 @end
 
@@ -54,11 +57,15 @@
         [models addObject:arr];
     }
     
+    __weak typeof(self)wself = self;
     _giftKeyboard = [MYGiftKeyboard keyboardWithTitles:titles style:style models:models];
     _giftKeyboard.commitClickBlock = ^(MYGiftKeyboardModel *model) {
-        NSLog(@"点击了 %@", model);
+        [wself insetMessage:@"mayan 赠送了一个礼物🎁"];
     };
     [self.view addSubview:_giftKeyboard];
+    
+    // 3. 聊天列表
+    _chatTableView.rowHeight = 25;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,6 +74,8 @@
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.tabBarController.tabBar.hidden = YES;
+    
+    [self insetMessage:@"mayan 进入了房间"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -160,7 +169,54 @@
 #pragma mark - MYChatToolsViewDelegate
 - (void)chatToolsView:(MYChatToolsView *)chatToolsView message:(NSString *)message
 {
-    NSLog(@"%@", message);
+    [self insetMessage:[NSString stringWithFormat:@"mayan：%@", message]];
+}
+
+
+#pragma mark - UITableViewDelegate and UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.chatsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"chatTableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.textLabel.textColor     = [UIColor whiteColor];
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font          = SYS_FONT(14);
+        cell.backgroundColor         = [UIColor clearColor];
+        cell.selectionStyle          = UITableViewCellSelectionStyleNone;
+    }
+    cell.textLabel.attributedText = self.chatsArray[indexPath.row];
+    
+    return cell;
+}
+
+
+#pragma mark - Lazy load
+- (NSMutableArray *)chatsArray
+{
+    if (!_chatsArray) {
+        _chatsArray = [NSMutableArray array];
+    }
+    return _chatsArray;
+}
+
+
+#pragma mark - Other
+- (void)insetMessage:(NSString *)message
+{
+    NSMutableAttributedString *mutMsg = [[NSMutableAttributedString alloc] initWithString:message];
+    [mutMsg addAttributes:@{NSForegroundColorAttributeName : [UIColor orangeColor]} range:NSMakeRange(0, 5)];
+    [self.chatsArray addObject:mutMsg];
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:self.chatsArray.count - 1 inSection:0];
+    [self.chatTableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationNone];
+    [self.chatTableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionBottom];
 }
 
 @end

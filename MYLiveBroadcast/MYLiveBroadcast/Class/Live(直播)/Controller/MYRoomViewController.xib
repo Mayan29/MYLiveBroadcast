@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -178,6 +177,17 @@
                             <action selector="people" destination="FRQ-dy-sH6" eventType="touchUpInside" id="O7T-uV-jAd"/>
                         </connections>
                     </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j4y-5W-RyY">
+                        <rect key="frame" x="0.0" y="423" width="375" height="200"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="g8f-dj-5Qz"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="dataSource" destination="FRQ-dy-sH6" id="aKf-ky-GXd"/>
+                            <outlet property="delegate" destination="FRQ-dy-sH6" id="aF9-aH-V8L"/>
+                        </connections>
+                    </tableView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
@@ -186,27 +196,30 @@
                     <constraint firstItem="2H7-nk-OUM" firstAttribute="top" secondItem="Oin-U1-ftK" secondAttribute="top" id="77c-sc-Pje"/>
                     <constraint firstItem="cy6-rk-LiY" firstAttribute="top" secondItem="dJ7-15-20t" secondAttribute="bottom" id="81k-jo-HfP"/>
                     <constraint firstItem="tXp-gD-Rje" firstAttribute="leading" secondItem="Oin-U1-ftK" secondAttribute="leadingMargin" constant="10" id="BUX-WD-rzy"/>
+                    <constraint firstAttribute="trailing" secondItem="j4y-5W-RyY" secondAttribute="trailing" id="LrQ-aD-e79"/>
                     <constraint firstItem="EFb-ZX-Hdb" firstAttribute="top" secondItem="p45-ix-PHS" secondAttribute="bottom" constant="20" id="NKi-cs-PoD"/>
                     <constraint firstAttribute="trailing" secondItem="dJ7-15-20t" secondAttribute="trailing" id="US4-vo-kni"/>
                     <constraint firstItem="EFb-ZX-Hdb" firstAttribute="trailing" secondItem="Oin-U1-ftK" secondAttribute="trailingMargin" constant="10" id="YF2-yQ-8KP"/>
                     <constraint firstItem="EFb-ZX-Hdb" firstAttribute="leading" secondItem="YEf-Bn-FDT" secondAttribute="trailing" id="Ypk-Z1-cPa"/>
                     <constraint firstAttribute="trailing" secondItem="2H7-nk-OUM" secondAttribute="trailing" id="abH-Nq-6zk"/>
                     <constraint firstItem="2H7-nk-OUM" firstAttribute="leading" secondItem="Oin-U1-ftK" secondAttribute="leading" id="ivv-Fo-UGh"/>
+                    <constraint firstItem="dJ7-15-20t" firstAttribute="top" secondItem="j4y-5W-RyY" secondAttribute="bottom" id="mox-6i-Q4D"/>
                     <constraint firstItem="dJ7-15-20t" firstAttribute="leading" secondItem="Oin-U1-ftK" secondAttribute="leading" id="q0C-vC-FJ1"/>
                     <constraint firstItem="EFb-ZX-Hdb" firstAttribute="centerY" secondItem="YEf-Bn-FDT" secondAttribute="centerY" id="qHb-fo-LH1"/>
                     <constraint firstItem="tXp-gD-Rje" firstAttribute="top" secondItem="p45-ix-PHS" secondAttribute="bottom" constant="30" id="uFu-sX-qrA"/>
+                    <constraint firstItem="j4y-5W-RyY" firstAttribute="leading" secondItem="Oin-U1-ftK" secondAttribute="leading" id="w8l-gK-W8I"/>
                     <constraint firstItem="cy6-rk-LiY" firstAttribute="top" secondItem="2H7-nk-OUM" secondAttribute="bottom" id="wq1-sO-2Fj"/>
                 </constraints>
-                <viewLayoutGuide key="safeArea" id="tIZ-7d-mzc"/>
             </view>
             <connections>
                 <outlet property="bgImageView" destination="2H7-nk-OUM" id="jbf-SX-6wz"/>
                 <outlet property="bottomView" destination="dJ7-15-20t" id="bDA-t3-sx0"/>
+                <outlet property="chatTableView" destination="j4y-5W-RyY" id="UFc-fi-uYR"/>
                 <outlet property="iconImageView" destination="ghM-NN-kOw" id="JbD-Zl-901"/>
                 <outlet property="nameLabel" destination="aeK-Ig-VOr" id="7ty-Vj-hxd"/>
                 <outlet property="roomIdLabel" destination="Bmf-lT-Vf7" id="JWM-Zj-jF7"/>
             </connections>
-            <point key="canvasLocation" x="-10" y="47"/>
+            <point key="canvasLocation" x="-10.5" y="46.5"/>
         </viewController>
     </objects>
     <resources>
